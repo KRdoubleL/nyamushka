@@ -1,12 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "index.scss";
+import Main from "./components/main/main.jsx";
+import styled from 'styled-components';
+import $ from 'jquery';
 
-let HelloWorld = () => {
-  return <h1>Hello there World!</h1>
-}
+const Background = styled.div`
+  padding: 0;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+  text-align: center;
+`;
+
+const Test = () => {
+  return <Background><Main /></Background>
+};
 
 ReactDOM.render(
-  <HelloWorld/>,
+  <Test/>,
   document.getElementById("root")
 );

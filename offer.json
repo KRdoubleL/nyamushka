@@ -1,0 +1,12 @@
+{
+  "offer": {
+    "name": "Сказочное заморское яство",
+    "brand": "Нямушка",
+    "portion": "порций",
+    "items": [
+      {"id": 1, "ingredients": "с фуа-гра", "quantity": "10", "present": "мишь в подарок", "weight": "0,5 KG"}
+      {"id": 2, "ingredients": "с рыбой", "quantity": "40", "present": "миши в подарок", "weight": "2 KG"}
+      {"id": 3, "ingredients": "с курой", "quantity": "100", "present": "мишей в подарок", "weight": "5 KG"}
+    ]
+  }
+}
