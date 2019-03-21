@@ -1,18 +1,42 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, {Component} from 'react';
+import offerService from '../../api/offer.service'
 
-const Offer = ({ className }) => {
-  return (
-    <div className={className}>
-    </div>
-  )
+require('./mainOffer.scss')
+
+class MainOffer extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            offer: null
+        }
+    }
+
+    async componentDidMount() {
+
+        // User offerService with Mocking offer.json
+        let { offer } =  await offerService.getAll()
+        console.log(offer)
+        this.setState({
+            offer: offer
+        })
+    }
+
+    render() {
+        return (
+            <div className="Main-Offer">
+                {this.state.offer ? (
+                    <ul>
+                        <li>Brand: { this.state.offer.brand }</li>
+                        <li>Name: { this.state.offer.name }</li>
+                        <li>Portion: { this.state.offer.portion }</li>
+                        ...
+                    </ul>
+                ) : (
+                    <div>Loading...</div>
+                )}
+            </div>
+        )
+    }
 }
-
-const MainOffer = styled(Offer)`
-  width: 320px;
-  height: 480px;
-  margin: 0 auto;
-  background-color: purple;
-`;
 
 export default MainOffer;
