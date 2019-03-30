@@ -1,12 +1,24 @@
-import React from "react";
+import React, {Component} from 'react';
 import ReactDOM from "react-dom";
-import "index.scss";
+//import Main from './components/main/Main.jsx';
 
-let HelloWorld = () => {
-  return <h1>Hello there World!</h1>
+require ('./index.scss')
+
+class Test extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+      <p>text</p>
+      //<Main />
+      </div>
+    )
+  }
 }
 
 ReactDOM.render(
-  <HelloWorld/>,
+  Test,
   document.getElementById("root")
 );
