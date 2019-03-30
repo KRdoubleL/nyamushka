@@ -1,23 +1,24 @@
-import React from "react";
+import React, {Component} from 'react';
 import ReactDOM from "react-dom";
-import "index.scss";
-import Main from "./components/main/main.jsx";
-import styled from 'styled-components';
-import $ from 'jquery';
+//import Main from './components/main/Main.jsx';
 
-const Background = styled.div`
-  padding: 0;
-  padding-left: 80px;
-  padding-right: 80px;
-  margin: 0 auto;
-  text-align: center;
-`;
+require ('./index.scss')
 
-const Test = () => {
-  return <Background><Main /></Background>
-};
+class Test extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+      <p>text</p>
+      //<Main />
+      </div>
+    )
+  }
+}
 
 ReactDOM.render(
-  <Test/>,
+  Test,
   document.getElementById("root")
 );
